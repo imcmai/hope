@@ -2,3 +2,5 @@
     - [分布式锁浅谈](java/distributedlock)
 - **MYSQL**
     - [MYSQL查询缓存](record/mysqlcacherecord.md)
+- **阅读**
+    - [JAVA并发编程实战](reading/bfbc.md)
