@@ -1,6 +1,14 @@
 - **JAVA**
-    - [分布式锁浅谈](java/distributedlock)
-- **MYSQL**
-    - [MYSQL查询缓存](record/mysqlcacherecord.md)
+    - [分布式锁浅谈](JAVA/distributedlock)
 - **阅读**
-    - [JAVA并发编程实战](reading/bfbc.md)
+    - [JAVA并发编程实战(极客时间)](READING/CONCURRENTPROGAMMING.md)
+    - [MYSQL是怎样运行的(掘金小册)](READING/MYSQLPRINCIPLE.md)
+    - [深入理解java虚拟机(实体书)](READING/JAVAVIRTUALMACHINE.md)
+- **记录**
+    - [MYSQL查询缓存](RECORD/MYSQLCACHERECORD.md)
+    - [异构数据源数据同步DATAX](RECORD/DATAXRECORD.md)
+    - [插入一千万条记录分组排序](RECORD/DATAFORKJOIN.md)
+    - [LAMBDA取出对象list中某个字段重复的集合](RECORD/FETCHDUPLICATESET-LAMBDA.md)
+    - [METABASE介绍及踩过的坑](RECORD/METABASERECORD.md)
+    - [ELK6.X介绍及踩过的坑](RECORD/ELKRECORD.md)
+    - [记一次阿里巴巴druid连接池超时](RECORD/DRUIDTIMEOUTRECORD.md)
