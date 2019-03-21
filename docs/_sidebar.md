@@ -1,5 +1,5 @@
 - **JAVA**
-    - [分布式锁浅谈](JAVA/distributedlock)
+    - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)
 - **阅读**
     - [JAVA并发编程实战(极客时间)](READING/CONCURRENTPROGAMMING.md)
     - [MYSQL是怎样运行的(掘金小册)](READING/MYSQLPRINCIPLE.md)
