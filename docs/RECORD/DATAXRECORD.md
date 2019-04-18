@@ -2,10 +2,10 @@
 按照客户不同维度的条件来查询客户信息的需求，客户维度不同的数据都是加工落地在不同的数据源的。
 为了更高的查询效率，从不同的数据源使用datax聚合数据同步落地到项目中的数据源，方便创建索引和减少查询复杂度提升查询效率。
 <br/>github repo:https://github.com/alibaba/DataX
-### 简介
+## 简介
 DataX 是阿里巴巴集团内被广泛使用的离线数据同步工具/平台，
 实现包括 MySQL、Oracle、SqlServer、Postgre、HDFS、Hive、ADS、HBase、TableStore(OTS)、MaxCompute(ODPS)、DRDS 等各种异构数据源之间高效的数据同步功能。
-#### 主要优势
+### 主要优势
 - 脏数据检测
     在大量数据的传输过程中，必定会由于各种原因导致很多数据传输报错(比如类型转换错误)，这种数据DataX认为就是脏数据。DataX目前可以实现脏数据精确过滤、识别、采集、展示，为用户提供多种的脏数据处理模式
 - 流量、数据量监控
@@ -16,8 +16,8 @@ DataX 是阿里巴巴集团内被广泛使用的离线数据同步工具/平台�
     根据切分策略,将作业合理切分成多个Task并行执行,多线程执行模型可以让DataX速度随并发成线性增长
 ### 环境
 基于python，需要部署python2.7.x
-### 使用
-#### 配置文件示例
+## 使用
+### 配置文件示例
 执行datax需要配置datax可识别的json文件
 json主要分为reader和writer，对应读取和写入的数据源
 <br/>
@@ -206,7 +206,7 @@ hbase到mysql
 }
 
 ```
-#### 执行
+## 执行
 1. windows直接cmd执行datax的核心文件datax.py并指定需要解析的配置文件即可，如:python path/bin/datax.py path/dataxconfig/dataxtest.json
 2. shell脚本执行
 3. java调用Runtime.getRuntime().exec(param)通知JVM执行服务器命令，执行时为阻塞状态
@@ -215,7 +215,7 @@ hbase到mysql
     Runtime.getRuntime().exec(params);
 ```
 我在此次项目用的就是这一种，方便在datax同步前后做一些逻辑处理
-#### datax入口
+## datax入口
 datax入口函数 datax.py __main__
 ```java
 printCopyright()
@@ -231,6 +231,6 @@ startCommand = buildStartCommand(options, args)
 child_process = subprocess.Popen(startCommand, shell=True)
 ```
 大意就是拼接参数启动新的进程去执行java命令
-#### 提示
+## 提示
 部署datax时可删除无用plugin，否则datax整体软件包会很膨胀
 好了，去体验datax的极速吧
