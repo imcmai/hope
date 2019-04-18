@@ -21,95 +21,91 @@ DataX 是阿里巴巴集团内被广泛使用的离线数据同步工具/平台�
 执行datax需要配置datax可识别的json文件
 json主要分为reader和writer，对应读取和写入的数据源
 <br/>
-oracle到mysql<br/>
-```java
-{ 
- 
-    "job": { 
- 
-        "content": [ 
- 
-            { 
-		        //读取数据源配置
-                "reader": { 
-		            //数据源:详参见datax Support Data Channels 如:oraclereader
-                    "name": "oraclereader",
- 
-                    "parameter": { 
-			            //连接用户名
-                        "username": "test", 
-			            //连接密码
-                        "password": "test",  
-                        //可用于增量更新
-                        "where":"",
-			            //需要同步的列
-			            "column": [
-                            "id","name"
-                        ],
-                        "connection": [ 
-                            { 
-				                //需要同步的数据，通过querysql来指定，可以在同步时就做好sql级的加工
-                                "querySql": [ 
-                                    select name uname from test
-                                ], 
-                                //也可以指定表名
-                                "table":[
-                                    test
-                                ],
-                                //jdbc连接地址
-                                "jdbcUrl": [ 
-                                    "jdbc:oracle:thin:@//***.***.*.*:**/test"
-                                ] 
-                            } 
-                        ] 
-                    } 
-                }, 
-		        //写数据源配置
-                "writer": { 
-                    "name": "mysqlwriter",
-                    "parameter": { 
-                        "username": "", 
-                        "password": "", 
-                        "column": [],
-                        //执行写操作前的语句
-                        "preSql":[
-                            "delete from test"
-                        ],
-                        "connection": [ 
-                            { 
-                                "table": [ 
-                                    "test" 
-                                ], 
-                                "jdbcUrl":"jdbc:mysql://ip:port/test?useUnicode=true&characterEncoding=GBK&autoReconnect=true&failOverReadOnly=false&tinyInt1isBit=false"                              
-                            } 
-                        ]   
+oracle到mysql
+```
+    { 
+        "job": { 
+            "content": [ 
+                { 
+                    //读取数据源配置
+                    "reader": { 
+                        //数据源:详参见datax Support Data Channels 如:oraclereader
+                        "name": "oraclereader",
+     
+                        "parameter": { 
+                            //连接用户名
+                            "username": "test", 
+                            //连接密码
+                            "password": "test",  
+                            //可用于增量更新
+                            "where":"",
+                            //需要同步的列
+                            "column": [
+                                "id","name"
+                            ],
+                            "connection": [ 
+                                { 
+                                    //需要同步的数据，通过querysql来指定，可以在同步时就做好sql级的加工
+                                    "querySql": [ 
+                                        select name uname from test
+                                    ], 
+                                    //也可以指定表名
+                                    "table":[
+                                        test
+                                    ],
+                                    //jdbc连接地址
+                                    "jdbcUrl": [ 
+                                        "jdbc:oracle:thin:@//***.***.*.*:**/test"
+                                    ] 
+                                } 
+                            ] 
+                        } 
+                    }, 
+                    //写数据源配置
+                    "writer": { 
+                        "name": "mysqlwriter",
+                        "parameter": { 
+                            "username": "", 
+                            "password": "", 
+                            "column": [],
+                            //执行写操作前的语句
+                            "preSql":[
+                                "delete from test"
+                            ],
+                            "connection": [ 
+                                { 
+                                    "table": [ 
+                                        "test" 
+                                    ], 
+                                    "jdbcUrl":"jdbc:mysql://ip:port/test?useUnicode=true&characterEncoding=GBK&autoReconnect=true&failOverReadOnly=false&tinyInt1isBit=false"                              
+                                } 
+                            ]   
+                        } 
                     } 
                 } 
-            } 
-        ], 
-        "setting": {
-		        //效率控制
-                 "speed": {
-                          //设置传输速度 byte/s 尽量逼近这个速度但是不高于它.
-                        // channel 表示通道数量，byte表示通道速度，如果单通道速度1MB，配置byte为1048576表示一个channel
-                         "channel": 1,
-                         "byte": 104857600
-                 },
-		            //出错限制
-                 "errorLimit": {
-			            //脏数据条数，优先选择record
-                         "record": 10,
-			            //脏数据百分比
-                         "percentage": 0.05
-		           }
-	        }
-    } 
-}
+            ], 
+            "setting": {
+                    //效率控制
+                     "speed": {
+                              //设置传输速度 byte/s 尽量逼近这个速度但是不高于它.
+                            // channel 表示通道数量，byte表示通道速度，如果单通道速度1MB，配置byte为1048576表示一个channel
+                             "channel": 1,
+                             "byte": 104857600
+                     },
+                        //出错限制
+                     "errorLimit": {
+                            //脏数据条数，优先选择record
+                             "record": 10,
+                            //脏数据百分比
+                             "percentage": 0.05
+                       }
+                }
+        } 
+    }
 ```
-<br/>
 hbase到mysql
-<br/>
-```java
+
+```
 { 
  
     "job": { 
