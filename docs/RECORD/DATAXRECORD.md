@@ -20,10 +20,9 @@ DataX 是阿里巴巴集团内被广泛使用的离线数据同步工具/平台�
 ### 配置文件示例
 执行datax需要配置datax可识别的json文件
 json主要分为reader和writer，对应读取和写入的数据源
-<br/>
-oracle到mysql
-```
-    { 
+### oracle到mysql
+```code
+{ 
         "job": { 
             "content": [ 
                 { 
@@ -103,9 +102,8 @@ oracle到mysql
         } 
     }
 ```
-hbase到mysql
-
-```
+### hbase到mysql
+```code
 { 
  
     "job": { 
@@ -202,7 +200,6 @@ hbase到mysql
 	    }
     } 
 }
-
 ```
 ## 执行
 1. windows直接cmd执行datax的核心文件datax.py并指定需要解析的配置文件即可，如:python path/bin/datax.py path/dataxconfig/dataxtest.json
