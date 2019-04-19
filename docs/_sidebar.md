@@ -13,3 +13,4 @@
     - [METABASE介绍及踩过的坑](RECORD/METABASERECORD.md)
     - [ELK6.X介绍及踩过的坑](RECORD/ELKRECORD.md)
     - [记一次阿里巴巴druid连接池超时](RECORD/DRUIDTIMEOUTRECORD.md)
+    - [python和shell操作redis](RECORD/PYTHONORSHELLCALLREDIS.md)
