@@ -1,3 +1,4 @@
+## LAMBDA取出对象list中某个字段重复的集合
 ```java
     arrays.stream()
     .collect(Collectors.groupBy(a->a.getField,Collectors.counting())
