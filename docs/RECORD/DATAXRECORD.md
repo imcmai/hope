@@ -1,7 +1,7 @@
 ## 异构数据源高效同步datax
 按照客户不同维度的条件来查询客户信息的需求，客户维度不同的数据都是加工落地在不同的数据源的。
 为了更高的查询效率，从不同的数据源使用datax聚合数据同步落地到项目中的数据源，方便创建索引和减少查询复杂度提升查询效率。
-<br/>github repo:https://github.com/alibaba/DataX
+<br/>[github repo](https://github.com/alibaba/DataX)
 ## 简介
 DataX 是阿里巴巴集团内被广泛使用的离线数据同步工具/平台，
 实现包括 MySQL、Oracle、SqlServer、Postgre、HDFS、Hive、ADS、HBase、TableStore(OTS)、MaxCompute(ODPS)、DRDS 等各种异构数据源之间高效的数据同步功能。
