@@ -19,6 +19,7 @@
       Message newMessage(String countryCode);
   }
   请编写一个实现MessageFactory 接口的类，并使用到单例模式。
+  
 ```code
 package subject.demo.one;
 /**
