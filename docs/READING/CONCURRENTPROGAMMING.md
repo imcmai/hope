@@ -13,3 +13,28 @@
 - 寄存器执行+1
 - 结果写入内存(可能写入的是cpu缓存，不一定是内存)
 所以会有可能在指令1或者指令2切换线程，导致出现count结果并不如自己想的那样
+> cpu执行多个操作不可被中断称之为原子性，而原子操作的级别是cpu指令，而不是高级语言的操作符
+而我们需要的正是在高级语言层面保证原子性
+### 有序性
+有序性指的是程序代码按照先手顺序执行，但是编译器会按照规则来优化我们的代码，提高性能，而有的时候优化过后的代码是会出现莫名其妙的bug的
+比如这里的一个单例
+```code
+    public class Singleton {
+      static Singleton instance;
+      static Singleton getInstance(){
+        if (instance == null) {
+          synchronized(Singleton.class) {
+            if (instance == null)
+              instance = new Singleton();
+            }
+        }
+        return instance;
+      }
+    }
+```
+[单例模式jvm重排带来的问题](/JAVA/singleton.md?id=jvmRearrangement)
+## 可见，原子，有序性简单总结
+只要我们能够理解到这三种特性在并发编程中的原理，很多并发bug是可以轻松解决的。
+#### 问题，32位机器long型变量进行操作会有并发隐患？
+非volatile类型的long和double型变量是8字节64位的，32位机器读或写这个变量时得把变量分成两个32位操作，线程读了某个值的高32位，低32位可能已经被另一个线程修改。所以官方推荐最好把long/double 变量声明为volatile或是同步加锁synchronize以避免并发问题
+

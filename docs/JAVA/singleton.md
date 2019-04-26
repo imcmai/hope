@@ -28,7 +28,7 @@ package subject.demo.one;
  * @description message factory double check singleton impl
  */
 public class MessageFactoryImpl implements MessageFactory {
-    private volatile static Message singleton;
+    private volatile Message singleton;
     @Override
     public Message newMessage(String countryCode) {
         if (singleton == null) {
@@ -53,7 +53,7 @@ public class MessageFactoryImpl implements MessageFactory {
 我们来解读一下
     1. 双检查是为了在对象创建成功的情况下不必要加锁，所以在外层直接返回实例对象
     2. volatile的作用是为了避免jvm对代码进行重排序
-## volatile重排带来的问题
+## jvm重排带来的问题 :id=jvmRearrangement
 创建对象我们认为的执行顺序应该是
     1. 分配一块内存M
     2. 内存M初始化单例对象
@@ -62,6 +62,8 @@ public class MessageFactoryImpl implements MessageFactory {
     1. 分配一块内存M
     2. 将实例的指针指向M
     3. 内存M初始化单例对象
-这个时候就有可能触发空指针问题(假如发生线程切换)，这就是volatile的作用，禁止指令重排序
+这个时候就有可能触发空指针问题(假如发生线程切换,对象创建到一半，让出cpu时间片，其他线程判断空值，不为空，拿此对象去操作)，这就是volatile的作用，禁止指令重排序，
+有volatile声明的变量，假如有两个线程，线程A执行完后会强制将值刷新到内存中，线程B进行相关操作时会强制重新把内存中的内容写入到自己的缓存，这也是happen-before规则之一，后续会讲happen-before规则
 ## 其他
 volatile在JDK1.5之后，就加入了happen-before规则之中，后续的juc并发包，可见性基本都依赖于volatile
+[java并发编程](/READING/CONCURRENTPROGAMMING)
