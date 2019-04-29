@@ -25,22 +25,25 @@ filebeat监控各个日志目录下的文件,一旦监控到有变动更新时�
 es不做任何配置，新版es需1.8以上jdk环境,如果服务器已部署好1.7的环境，那么可以单独给es配置1.8的环境，先创建环境变量，
 然后修改bin目录下的启动脚本<br/>
 bin目录下elasticsearch -env.bat:
-<br/>
 ![es_jdk_operation](../_media/es_jdk.png)
 <br/>
 这里的es_home是我自己配置的1.8的环境变量,然后./elasticsearch 启动es然后报错,ES需要非ROOT账户，另外创建一个账户，赋予es文件夹的权限，然后启动，可以了
 ### 验证es是否启动
 es默认端口是9200，所以直接
-```code
-curl 'http://localhost:9200'
+
+```
+    curl 'http://localhost:9200';
 ```
 ### 后台启动es
-```code
-./bin/es -d
+
+```
+    ./bin/es -d;
 ```
 ### Logstash的部署和启动
+
 #### logstash三大组件
-```code
+
+```
     input{
         beats{
             port:5044
@@ -52,11 +55,12 @@ curl 'http://localhost:9200'
 ```
 input组件，beats表示从beat插件读取:此次用的是filebeat，开放5044端口用于接收filebeat输出的日志,file代表的logstash直接从文件中读取，不经过filebeat
 beat的还有很多其他种类，比如直接从程序中接收日志等等暂时就不做介绍，这次我们是通过filebeat来读取文件.
-```code
+
+```
     filter{
-        grok{
-            match => {'message','%{TIMESTAMP_ISO8601:logdate}'}
-        }
+         grok{
+             match => {'message','%{TIMESTAMP_ISO8601:logdate}'}
+         }
     }
 ```
 filter组件，用于过滤日志，grok内的正则可以提取日志关键信息，这里为提取日期,
