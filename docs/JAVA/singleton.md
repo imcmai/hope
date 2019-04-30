@@ -12,12 +12,14 @@
 ## 单例最佳实践
 这是之前做的一道笔试题
 > 1：现在有Message和MessageFactory两个接口如下：
-  public interface Message extends Serializable {
-       void printMessage();
-  }
-  public interface MessageFactory {
-      Message newMessage(String countryCode);
-  }
+    ```code
+        public interface Message extends Serializable {
+            void printMessage();
+        }
+        public interface MessageFactory {
+            Message newMessage(String countryCode);
+        }
+    ```
   请编写一个实现MessageFactory 接口的类，并使用到单例模式。
   
 ```code
