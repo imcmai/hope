@@ -1,6 +1,7 @@
 - **JAVA**
     - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)
     - [ArrayBlockingQueue](JAVA/ArrayBlockingQueue.md)
+    - [ThreadLocal](JAVA/ThreadLocal.md)
     - [设计模式之单例模式](JAVA/singleton.md)
 - **阅读**
     - [JAVA并发编程实战(极客时间)](READING/CONCURRENTPROGAMMING.md)
