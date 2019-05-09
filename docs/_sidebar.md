@@ -5,7 +5,7 @@
     - [设计模式之单例模式](JAVA/singleton.md)
 - **阅读总结**
     - [JAVA并发编程实战](READING/CONCURRENTPROGAMMING.md)
-    - [MYSQL是怎样运行的](READING/MYSQLPRINCIPLE.md)
+    - [MySQL是怎样运行的](READING/MYSQLPRINCIPLE.md)
     - [深入理解java虚拟机](READING/JAVAVIRTUALMACHINE.md)
 - **记录**
     - [MYSQL查询缓存](RECORD/MYSQLCACHERECORD.md)
