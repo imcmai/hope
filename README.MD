@@ -3,7 +3,7 @@
 * 闲聊技术
 * 吹水
 ####
-auther:<br/>
+author:<br/>
 https://github.com/lzyjava1985
 <br/>
 https://github.com/imcmai
