@@ -1,15 +1,17 @@
 - **JAVA**
-    - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)
-    - [ArrayBlockingQueue](JAVA/ArrayBlockingQueue.md)
-    - [ThreadLocal](JAVA/ThreadLocal.md)
-    - [设计模式之单例模式](JAVA/singleton.md)
-    - [重新认识一下数组](JAVA/Array.md)
-    - [算法-时间复杂度简述](JAVA/AlgorithmicComplexity.md)
-- **阅读总结**
-    - [JAVA并发编程实战](READING/CONCURRENTPROGAMMING.md)
-    - [MySQL是怎样运行的](READING/MYSQLPRINCIPLE.md)
-    - [深入理解java虚拟机](READING/JAVAVIRTUALMACHINE.md)
-- **记录**
+    - **并发包**
+        - [阻塞队列ArrayBlockingQueue](JAVA/ArrayBlockingQueue.md)
+        - [线程副本ThreadLocal](JAVA/ThreadLocal.md)
+    - **数据结构**
+        - [重新认识一下数组](JAVA/Array.md)
+        - [重新认识一下链表](JAVA/LinkedList.md)
+    - **设计模式**
+        - [装饰器模式](PATTERN/Decorator.md)  
+        - [单例模式](JAVA/singleton.md)
+    - **算法**
+        - [算法-时间复杂度简述](JAVA/AlgorithmicComplexity.md)
+- **中间件实践**
+    - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)  
     - [MYSQL查询缓存](RECORD/MYSQLCACHERECORD.md)
     - [异构数据源数据同步DATAX实战](RECORD/DATAXRECORD.md)
     - [插入一千万条记录分组排序](RECORD/DATAFORKJOIN.md)
@@ -17,6 +19,9 @@
     - [METABASE介绍及踩过的坑](RECORD/METABASERECORD.md)
     - [ELK6.X介绍及踩过的坑](RECORD/ELKRECORD.md)
     - [记一次阿里巴巴druid连接池超时](RECORD/DRUIDTIMEOUTRECORD.md)
-    - [python和shell操作redis](RECORD/PYTHONORSHELLCALLREDIS.md)
-- **PATTRN**
-    - [装饰器模式](PATTERN/Decorator.md)  
+    - [python和shell操作redis](RECORD/PYTHONORSHELLCALLREDIS.md)  
+- **阅读总结**
+    - [JAVA并发编程实战](READING/CONCURRENTPROGAMMING.md)
+    - [MySQL是怎样运行的](READING/MYSQLPRINCIPLE.md)
+    - [深入理解java虚拟机](READING/JAVAVIRTUALMACHINE.md)
+  
