@@ -4,6 +4,7 @@
     - [ThreadLocal](JAVA/ThreadLocal.md)
     - [设计模式之单例模式](JAVA/singleton.md)
     - [重新认识一下数组](JAVA/Array.md)
+    - [算法-时间复杂度简述](JAVA/AlgorithmicComplexity.md)
 - **阅读总结**
     - [JAVA并发编程实战](READING/CONCURRENTPROGAMMING.md)
     - [MySQL是怎样运行的](READING/MYSQLPRINCIPLE.md)
