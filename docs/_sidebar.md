@@ -22,6 +22,6 @@
     - [python和shell操作redis](RECORD/PYTHONORSHELLCALLREDIS.md)  
 - **阅读总结**
     - [JAVA并发编程实战](READING/CONCURRENTPROGAMMING.md)
-    - [MySQL是怎样运行的](READING/MYSQLPRINCIPLE.md)
+    - [MySQL的B+树索引原理](READING/MySQLB+TreeIndex.md)
     - [深入理解java虚拟机](READING/JAVAVIRTUALMACHINE.md)
   
