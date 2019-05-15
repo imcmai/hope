@@ -24,6 +24,7 @@
 ## 带头链表
 为了不在代码中写入的时候对空链表做额外处理，可以初始化一个节点，叫做哨兵节点，数据域并不存储数据。
 ## 反转单链表
+逆转指针
 ```code
 package com.cmai.common;
 
@@ -103,7 +104,115 @@ public class Node {
 
 ```
 ## 有序链表合并
-...
-## 链表实现LRU缓存淘汰策略
-...
+
+```code
+package com.cmai.common;
+
+/**
+ * @author cmai
+ * @desc 合并两个有序链表
+ */
+public class Node {
+    private int data;
+    private Node next;
+
+    public Node(int data) {
+        this.data = data;
+    }
+
+    public Node(int data, Node next) {
+        this.data = data;
+        this.next = next;
+    }
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(int data) {
+        this.data = data;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+
+    public static void main(String[] args) {
+        Node n1 = new Node(1);
+        Node n2 = new Node(2);
+        Node n3 = new Node(3);
+        n1.next=n2;
+        n2.next=n3;
+        Node o1 = new Node(1);
+        Node o2 = new Node(3);
+        Node o3 = new Node(4);
+        o1.next=o2;
+        o2.next=o3;
+        Node mergeNode = mergeNode(n1,o1);
+        System.out.println("合并后:"+mergeNode.getData()+mergeNode.getNext().getData()+mergeNode.getNext().getNext().getData()+
+        mergeNode.getNext().getNext().getNext().getData()+mergeNode.getNext().getNext().getNext().getNext().getData());
+    }
+    public static Node mergeNode(Node n1, Node o1) {
+        if (n1 == null) {
+            return o1;
+        }
+        if (o1 == null) {
+            return n1;
+        }
+
+        Node curNode = null;
+        if (n1.data < o1.data){
+            curNode = n1;
+            curNode.next = mergeNode(n1.next, o1);
+        } else {
+            curNode = o1;
+            curNode.next = mergeNode(n1, o1.next);
+        }
+        return curNode;
+    }
+}
+
+
+```
+## 链表实现简单的LRU缓存淘汰策略
+维护出一个尾部是最早访问的节点，头部是最新的链表，有新的数据需要加入缓存时，先遍历链表，如果数据已经存在，把它从原来节点删除
+并加入到头部，如果没有命中数据的话，链表长度达到最大就删除末尾的数据，加入新的数据。
+```code
+package com.cmai.common;
+
+import java.util.LinkedList;
+
+/**
+ * @author cmai
+ * @desc 链表实现LRU(最近最少使用)
+ */
+public class LinkedListLRU<T> extends LinkedList<T>{
+    private int size ;
+
+    public LinkedListLRU(int size) {
+        this.size = size;
+    }
+
+    public void put(T t){
+        if(contains(t)){
+            remove(t);
+            addFirst(t);
+        }else {
+            if(size()==size){
+                removeLast();
+                addFirst(t);
+            }else {
+                addFirst(t);
+            }
+        }
+    }
+}
+
+
+```
+## 判断是否是回文
 
