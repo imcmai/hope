@@ -5,10 +5,15 @@
     - **数据结构**
         - [重新认识一下数组](JAVA/Array.md)
         - [重新认识一下链表](JAVA/LinkedList.md)
+        - [重新认识一下栈](JAVA/Stack.md)
+        - [重新认识一下队列](JAVA/Queue.md)
+        - [跳跃表](JAVA/SkipList.md)
     - **设计模式**
         - [装饰器模式](PATTERN/Decorator.md)  
         - [单例模式](JAVA/singleton.md)
     - **算法**
+        - [二分查找算法](JAVA/BinarySearch.md)    
+    - **闲聊**
         - [算法-时间复杂度简述](JAVA/AlgorithmicComplexity.md)
 - **中间件实践**
     - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)  
