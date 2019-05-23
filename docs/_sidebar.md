@@ -3,10 +3,10 @@
         - [阻塞队列ArrayBlockingQueue](JAVA/ArrayBlockingQueue.md)
         - [线程副本ThreadLocal](JAVA/ThreadLocal.md)
     - **数据结构**
-        - [重新认识一下数组](JAVA/Array.md)
-        - [重新认识一下链表](JAVA/LinkedList.md)
-        - [重新认识一下栈](JAVA/Stack.md)
-        - [重新认识一下队列](JAVA/Queue.md)
+        - [数组](JAVA/Array.md)
+        - [链表](JAVA/LinkedList.md)
+        - [栈](JAVA/Stack.md)
+        - [队列](JAVA/Queue.md)
         - [跳跃表](JAVA/SkipList.md)
     - **设计模式**
         - [装饰器模式](PATTERN/Decorator.md)  
