@@ -18,7 +18,7 @@
         - [is null、is not null 、!=能否使用索引](READING/MySQLExecutionPlanExample.md)
 - **中间件实践**
     - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)  
-    - [MYSQL查询缓存](RECORD/MYSQLCACHERECORD.md)
+    - [MySQL查询缓存](RECORD/MYSQLCACHERECORD.md)
     - [异构数据源数据同步DATAX实战](RECORD/DATAXRECORD.md)
     - [插入一千万条记录分组排序](RECORD/DATAFORKJOIN.md)
     - [LAMBDA取出对象list中某个字段重复的集合](RECORD/FETCHDUPLICATESET-LAMBDA.md)
@@ -31,5 +31,5 @@
     - [JAVA并发编程实战](READING/CONCURRENTPROGAMMING.md)
     - [MySQL的B+树索引原理](READING/MySQLB+TreeIndex.md)
     - [深入理解java虚拟机](READING/JAVAVIRTUALMACHINE.md)
-    - [mysql执行计划](READING/mysqlExecutionPlan.md)
+    - [MySQL执行计划](READING/MySQLExecutionPlan.md)
     
