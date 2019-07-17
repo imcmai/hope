@@ -21,9 +21,9 @@ EXPLAIN select * from k1 where key1 !='a';
 ```
 ### 执行计划
 ```code
-"1"	"SIMPLE"	"k1"		"ref"	"key1"	"key1"	"768"	"const"	"1"	"100"	"Using index condition"
-"1"	"SIMPLE"	"k1"		"range"	"key1"	"key1"	"768"		"1"	"100"	"Using index condition"
-"1"	"SIMPLE"	"k1"		"range"	"key1"	"key1"	"768"		"2"	"100"	"Using index condition"
+"1"	"SIMPLE"	"k1"		"ref"	"key1"	"key1"	"768"	  "const"	"1"	"100"	"Using index condition"
+"1"	"SIMPLE"	"k1"		"range"	"key1"	"key1"	"768"		      "1"	"100"	"Using index condition"
+"1"	"SIMPLE"	"k1"		"range"	"key1"	"key1"	"768"		       "2"	"100"	"Using index condition"
 ```
 ### 结论
 几种方式都可以使用到索引，用不用索引的依据到底是什么呢,依据有两点，一是查找二级索引的成本，二是回表的成本，
