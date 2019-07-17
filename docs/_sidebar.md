@@ -15,6 +15,7 @@
         - [二分查找算法](JAVA/BinarySearch.md)    
     - **闲聊**
         - [算法-时间复杂度简述](JAVA/AlgorithmicComplexity.md)
+        - [is null、is not null 、!=能否使用索引](READING/MySQLExecutionPlanExample.md)
 - **中间件实践**
     - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)  
     - [MYSQL查询缓存](RECORD/MYSQLCACHERECORD.md)
@@ -31,3 +32,4 @@
     - [MySQL的B+树索引原理](READING/MySQLB+TreeIndex.md)
     - [深入理解java虚拟机](READING/JAVAVIRTUALMACHINE.md)
     - [mysql执行计划](READING/mysqlExecutionPlan.md)
+    
