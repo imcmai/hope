@@ -8,7 +8,7 @@ CREATE TABLE `k1` (
   `key2` int(11) DEFAULT NULL,
   `key3` decimal(10,0) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `key2` (`key2`) USING BTREE,
+  UNIQUE KEY `key2` (`key2`) USING BTREE, 
   KEY `key1` (`key1`) USING BTREE,
   KEY `key3` (`key3`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
