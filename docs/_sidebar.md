@@ -27,9 +27,9 @@
     - [ELK6.X介绍及踩过的坑](RECORD/ELKRECORD.md)
     - [记一次阿里巴巴druid连接池超时](RECORD/DRUIDTIMEOUTRECORD.md)
     - [python和shell操作redis](RECORD/PYTHONORSHELLCALLREDIS.md)  
-    - [浅谈阿里巴巴arthas](RECORD/arthas.md)
+    <!-- - [浅谈阿里巴巴arthas](RECORD/arthas.md) -->
 - **阅读总结**
     - [JAVA并发编程实战](READING/CONCURRENTPROGAMMING.md)
     - [MySQL的B+树索引原理](READING/MySQLB+TreeIndex.md)
-    - [深入理解java虚拟机](READING/JAVAVIRTUALMACHINE.md)
+    <!-- - [深入理解java虚拟机](READING/JAVAVIRTUALMACHINE.md) -->
     - [MySQL执行计划](READING/MySQLExecutionPlan.md)
