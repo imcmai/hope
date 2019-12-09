@@ -17,6 +17,7 @@
         - [算法-时间复杂度简述](JAVA/AlgorithmicComplexity.md)
         - [is null、is not null 、!=能否使用索引](READING/MySQLExecutionPlanExample.md)
         - [分析京东内衣销售记录](JAVA/searchjd.md)
+        - [Kali-linux](READING/kali.md)
 - **中间件实践**
     - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)  
     - [MySQL查询缓存](RECORD/MYSQLCACHERECORD.md)
