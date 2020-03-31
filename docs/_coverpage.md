@@ -6,4 +6,3 @@
 
 [GitHub](https://github.com/imcmai/cmaidoc)
 [Get Started](#quick-start)</br></br></br></br></br>
-[豫ICP备18035239号](http://beian.miit.gov.cn/)
