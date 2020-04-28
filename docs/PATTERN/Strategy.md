@@ -9,7 +9,7 @@
    ...
 }
 ```
-改造之前 后端的伪代码为
+改造之前 后端的代码为
 ```code
     public List<String> listUserPermissionsName(Param param) {
         //对应上述的前端数据结构
