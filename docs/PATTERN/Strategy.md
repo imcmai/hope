@@ -25,7 +25,7 @@
                 //查询权限...
                 result.addAll(menuNames);
             }
-            ........
+            if(...).
             ........
         }
         return result;
@@ -98,7 +98,8 @@ public class PermissionFactory {
     }
 }
 
-```code
+```
+
 ```code
 //改造后调用方代码
     public List<String> listUserPermissionsName(Param param) {
