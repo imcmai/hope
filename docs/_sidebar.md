@@ -11,7 +11,7 @@
     - **设计模式**
         - [装饰器模式](PATTERN/Decorator.md)  
         - [单例模式](JAVA/singleton.md)
-        - [策略模式+工厂模式改善既有代码]()
+        - [策略模式+工厂模式改善既有代码](PATTERN/Strategy.md)
     - **算法**
         - [二分查找算法](JAVA/BinarySearch.md)    
     - **闲聊**
