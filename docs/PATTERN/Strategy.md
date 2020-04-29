@@ -23,7 +23,7 @@
             }
             if(typeEnum==PermissionTypeEnum.FIELD){
                 //查询权限...
-                result.addAll(menuNames);
+                result.addAll(fieldNames);
             }
             if(...).
             ........
@@ -33,7 +33,7 @@
 ```
 ### 总结
 因为权限的粒度其实已经控制到了记录级(少量记录的数据，比如工作流的流程，表单等等)
-所以后续可能会有更多的扩展和更多的分支，每个分支的逻辑可能会越来越复杂，遂在闲暇之余对代码做了改造
+所以后续上面的后端代码可能会有更多的分支，每个分支的逻辑可能会越来越复杂，遂在闲暇之余对代码做了改造
 ### 改造后代码结构
 ```code
 //权限策略
@@ -102,6 +102,7 @@ public class PermissionFactory {
 
 ```code
 //改造后调用方代码
+//根据权限类型找到具体的策略类，把每个entry交给具体的策略类，策略类执行具体的业务逻辑后返回权限名称的集合，结束本次循环
     public List<String> listUserPermissionsName(Param param) {
         Map<String,List<String>> permissionIds = param.getParam();
         List<String> result = new ArrayList<>();
