@@ -1,4 +1,4 @@
-## J.U.C包下阻塞队列核心解读
+## J.U.C包下阻塞队列
 ```java
    /** 当前队列条目 **/
     private int count = 0;

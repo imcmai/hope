@@ -1,7 +1,7 @@
 - **JAVA**
     - **并发包**
-        - [阻塞队列ArrayBlockingQueue](JAVA/ArrayBlockingQueue.md)
-        - [线程副本ThreadLocal](JAVA/ThreadLocal.md)
+        - [手写阻塞队列ArrayBlockingQueue](JAVA/ArrayBlockingQueue.md)
+        - [解读线程副本ThreadLocal](JAVA/ThreadLocal.md)
     - **数据结构**
         - [数组](JAVA/Array.md)
         - [链表](JAVA/LinkedList.md)
