@@ -11,25 +11,27 @@
     - **设计模式**
         - [装饰器模式](PATTERN/Decorator.md)  
         - [单例模式](JAVA/singleton.md)
-        - [策略模式+工厂模式改善既有代码](PATTERN/Strategy.md)
+        - [实践策略模式+工厂模式改善既有代码](PATTERN/Strategy.md)
+        - [状态模式](PATTERN/State.md)
     - **算法**
         - [二分查找算法](JAVA/BinarySearch.md)    
-    - **闲聊**
-        - [算法-时间复杂度简述](JAVA/AlgorithmicComplexity.md)
-        - [is null、is not null 、!=能否使用索引](READING/MySQLExecutionPlanExample.md)
-        - [分析京东内衣销售记录](JAVA/searchjd.md)
-        - [Kali-linux](READING/kali.md)
-        - [xss注入实践](READING/xss.md)
-- **中间件实践**
-    - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)  
-    - [MySQL查询缓存](RECORD/MYSQLCACHERECORD.md)
+- **闲聊**
+    - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)
+    - [mysql索引优化，强制使用索引](RECORD/ForceIndex.md)    
+    - [is null、is not null 、!=能否使用索引](READING/MySQLExecutionPlanExample.md)
+    - [闲聊微服务幂等性](RECORD/SOAIdempotent.md)
     - [异构数据源数据同步DATAX实战](RECORD/DATAXRECORD.md)
-    - [插入一千万条记录分组排序](RECORD/DATAFORKJOIN.md)
-    - [LAMBDA取出对象list中某个字段重复的集合](RECORD/FETCHDUPLICATESET-LAMBDA.md)
     - [METABASE介绍及踩过的坑](RECORD/METABASERECORD.md)
     - [ELK6.X介绍及踩过的坑](RECORD/ELKRECORD.md)
-    - [记一次阿里巴巴druid连接池超时](RECORD/DRUIDTIMEOUTRECORD.md)
     - [python和shell操作redis](RECORD/PYTHONORSHELLCALLREDIS.md)  
+    - [算法-时间复杂度简述](JAVA/AlgorithmicComplexity.md)
+    - [分析京东内衣销售记录](JAVA/searchjd.md)
+    - [Kali-linux](READING/kali.md)
+    - [xss注入实践](READING/xss.md)
+    - [MySQL查询缓存](RECORD/MYSQLCACHERECORD.md)
+    - [LAMBDA取出对象list中某个字段重复的集合](RECORD/FETCHDUPLICATESET-LAMBDA.md)
+    - [插入一千万条记录分组排序](RECORD/DATAFORKJOIN.md)
+    - [记一次阿里巴巴druid连接池超时](RECORD/DRUIDTIMEOUTRECORD.md)
     <!-- - [浅谈阿里巴巴arthas](RECORD/arthas.md) -->
 - **阅读总结**
     - [JAVA并发编程实战](READING/CONCURRENTPROGAMMING.md)
