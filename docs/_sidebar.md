@@ -25,7 +25,7 @@
     - [METABASE介绍及踩过的坑](RECORD/METABASERECORD.md)
     - [ELK6.X介绍及踩过的坑](RECORD/ELKRECORD.md)
     - [python和shell操作redis](RECORD/PYTHONORSHELLCALLREDIS.md)  
-    - [算法-时间复杂度简述](JAVA/AlgorithmicComplexity.md)
+    <!-- - [算法-时间复杂度简述](JAVA/AlgorithmicComplexity.md) -->
     - [分析京东内衣销售记录](JAVA/searchjd.md)
     - [Kali-linux](READING/kali.md)
     - [xss注入实践](READING/xss.md)
@@ -34,9 +34,9 @@
     - [插入一千万条记录分组排序](RECORD/DATAFORKJOIN.md)
     - [记一次阿里巴巴druid连接池超时](RECORD/DRUIDTIMEOUTRECORD.md)
     <!-- - [浅谈阿里巴巴arthas](RECORD/arthas.md) -->
-- **阅读总结**
+- **总结**
     - [JAVA并发编程实战](READING/CONCURRENTPROGAMMING.md)
-    - [MySQL的锁类型](READING/MySQLLock)
+    - [MySQL中的锁](READING/MySQLLock)
     - [MySQL的B+树索引原理](READING/MySQLB+TreeIndex.md)
     <!-- - [深入理解java虚拟机](READING/JAVAVIRTUALMACHINE.md) -->
     - [MySQL执行计划](READING/MySQLExecutionPlan.md)
