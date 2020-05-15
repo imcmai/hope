@@ -17,17 +17,18 @@
         - [二分查找算法](JAVA/BinarySearch.md)    
 - **闲聊**
     - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)
-    - [JIT编译器引发的多线程问题](RECORD/JITCompilerRecord.md)
+    - [即时编译器(JIT)引发的多线程问题](RECORD/JITCompilerRecord.md)
     - [CPU缓存行(cache line)对于代码的影响](RECORD/CpuCacheLine.md)
-    - [mysql索引优化，强制使用索引](RECORD/ForceIndex.md)    
     - [is null、is not null 、!=能否使用索引](READING/MySQLExecutionPlanExample.md)
     - [闲聊微服务幂等性](RECORD/SOAIdempotent.md)
+- **记录**
+    - [mysql索引优化，强制使用索引](RECORD/ForceIndex.md)    
     - [异构数据源数据同步DATAX实战](RECORD/DATAXRECORD.md)
     - [METABASE介绍及踩过的坑](RECORD/METABASERECORD.md)
     - [ELK6.X介绍及踩过的坑](RECORD/ELKRECORD.md)
     - [python和shell操作redis](RECORD/PYTHONORSHELLCALLREDIS.md)  
     <!-- - [算法-时间复杂度简述](JAVA/AlgorithmicComplexity.md) -->
-    - [分析京东内衣销售记录](JAVA/searchjd.md)
+    - [爬虫分析京东商品销售记录](JAVA/searchjd.md)
     - [Kali-linux](READING/kali.md)
     - [xss注入实践](READING/xss.md)
     - [MySQL查询缓存](RECORD/MYSQLCACHERECORD.md)
