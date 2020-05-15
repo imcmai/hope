@@ -17,6 +17,7 @@
         - [二分查找算法](JAVA/BinarySearch.md)    
 - **闲聊**
     - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)
+    - [JIT编译器引发的多线程问题](RECORD/JITCompilerRecord.md)
     - [CPU缓存行(cache line)对于代码的影响](RECORD/CpuCacheLine.md)
     - [mysql索引优化，强制使用索引](RECORD/ForceIndex.md)    
     - [is null、is not null 、!=能否使用索引](READING/MySQLExecutionPlanExample.md)
