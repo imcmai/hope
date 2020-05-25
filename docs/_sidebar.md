@@ -21,6 +21,7 @@
     - [CPU缓存行(cache line)对于代码的影响](RECORD/CpuCacheLine.md)
     - [is null、is not null 、!=能否使用索引](READING/MySQLExecutionPlanExample.md)
     - [闲聊微服务幂等性](RECORD/SOAIdempotent.md)
+    - [服务性能指标](RECORD/PropertyIndex.md)
 - **记录**
     - [mysql索引优化，强制使用索引](RECORD/ForceIndex.md)    
     - [异构数据源数据同步DATAX实战](RECORD/DATAXRECORD.md)
