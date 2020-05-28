@@ -26,6 +26,7 @@
 - **记录**
     - [mysql索引优化，强制使用索引](RECORD/ForceIndex.md)    
     - [异构数据源数据同步DATAX实战](RECORD/DATAXRECORD.md)
+    - [gateway网关对请求做referer认证](RECORD/gatewayRefererAuth.md)
     - [METABASE介绍及踩过的坑](RECORD/METABASERECORD.md)
     - [ELK6.X介绍及踩过的坑](RECORD/ELKRECORD.md)
     - [python和shell操作redis](RECORD/PYTHONORSHELLCALLREDIS.md)  
