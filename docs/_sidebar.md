@@ -1,4 +1,4 @@
-- **JAVA**
+- **基础**
     - **并发包**
         - [手写阻塞队列ArrayBlockingQueue](JAVA/ArrayBlockingQueue.md)
         - [解读线程副本ThreadLocal](JAVA/ThreadLocal.md)
@@ -15,7 +15,7 @@
         - [状态模式](PATTERN/State.md)
     - **算法**
         - [二分查找算法](JAVA/BinarySearch.md)    
-- **闲聊**
+- **探索**
     - [ReentrantLock在dubbo中的应用](RECORD/Lock1.md)
     - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)
     - [即时编译器(JIT)引发的多线程问题](RECORD/JITCompilerRecord.md)
