@@ -16,6 +16,7 @@
     - **算法**
         - [二分查找算法](JAVA/BinarySearch.md)    
 - **闲聊**
+    - [ReentrantLock在dubbo中的应用](Record/Lock1.md)
     - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)
     - [即时编译器(JIT)引发的多线程问题](RECORD/JITCompilerRecord.md)
     - [CPU缓存行(cache line)对于代码的影响](RECORD/CpuCacheLine.md)
