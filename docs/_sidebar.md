@@ -33,6 +33,7 @@
     - [python和shell操作redis](RECORD/PYTHONORSHELLCALLREDIS.md)  
     <!-- - [算法-时间复杂度简述](JAVA/AlgorithmicComplexity.md) -->
     - [爬虫分析京东商品销售记录](JAVA/searchjd.md)
+    - [springboot集成rabbitmq实现延时队列](RECORD/rabbitmq1.md)
     - [Kali-linux](READING/kali.md)
     - [xss注入实践](READING/xss.md)
     - [MySQL查询缓存](RECORD/MYSQLCACHERECORD.md)
