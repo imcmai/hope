@@ -8,12 +8,14 @@ springboot集成rabbitmq，并使用延时队列插件发送延时消息，服�
         </dependency>
 ```
 ## yml
+```code
 spring:
   rabbitmq:
-    host: 192.168.1.186
+    host: 
     port: 5672
-    username: jinhuitai
-    password: jinhuitai
+    username: 
+    password: 
+```
 ## code
 ```code
 @Component
