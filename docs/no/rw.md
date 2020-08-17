@@ -1,4 +1,4 @@
-
+<!-- 
 # 不合理的代码
 ## 通过类对象引用类静态变量
 ```code
@@ -42,6 +42,13 @@ public class IdWorker {
     public IdWorker(final long workerId) {
         super();
         if (workerId > this.maxWorkerId || workerId < 0) {
+
+
+
+
+
+
+
             throw new IllegalArgumentException(String.format(
                     "worker Id can't be greater than %d or less than 0",
                     this.maxWorkerId));
@@ -117,4 +124,4 @@ public class ContractAPPCode extends AbstracAppCode {
 # 分享自己的代码
 ..........
 .........
-.......
+....... -->
