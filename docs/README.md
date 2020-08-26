@@ -1,2 +1,59 @@
-> 蜗牛动作虽慢，但是，爬上一个让所有人仰望的高度只是时间的问题
->> 引自[snail](http://study.ikuvn.com/#/)
+# 目的
+记录自己的成长过程，锻炼写作能力
+# 背景
+有些文章是17年底随笔记在word文档/txt文本的文章，有些是从自己的csdn迁移过来的，有些是最近写的
+[csdn链接](https://blog.csdn.net/qq_35902833)
+# 目录
+- **基础**
+    - **并发包**
+        - [手写阻塞队列ArrayBlockingQueue](JAVA/ArrayBlockingQueue.md)
+        - [解读线程副本ThreadLocal](JAVA/ThreadLocal.md)
+    - **数据结构**
+        - [数组](JAVA/Array.md)
+        - [链表](JAVA/LinkedList.md)
+        - [栈](JAVA/Stack.md)
+        - [队列](JAVA/Queue.md)
+        - [跳跃表](JAVA/SkipList.md)
+    - **设计模式**
+        - [装饰器模式](PATTERN/Decorator.md)  
+        - [单例模式](JAVA/singleton.md)
+        - [实践策略模式+工厂模式改善既有代码](PATTERN/Strategy.md)
+        - [状态模式](PATTERN/State.md)
+    - **算法**
+        - [二分查找算法](JAVA/BinarySearch.md)    
+- **探索**
+    - [ReentrantLock在dubbo中的应用](RECORD/Lock1.md)
+    - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)
+    - [即时编译器(JIT)引发的多线程问题](RECORD/JITCompilerRecord.md)
+    - [CPU缓存行(cache line)对于代码的影响](RECORD/CpuCacheLine.md)
+    - [is null、is not null 、!=能否使用索引](READING/MySQLExecutionPlanExample.md)
+    - [闲聊微服务幂等性](RECORD/SOAIdempotent.md)
+    - [服务性能指标](RECORD/PropertyIndex.md)
+    - [Synchronized锁对象注意事项(锁的不可变，私有性)](RECORD/Sync1.md)
+- **记录**
+    - [mysql索引优化，强制使用索引](RECORD/ForceIndex.md)    
+    - [异构数据源数据同步DATAX实战](RECORD/DATAXRECORD.md)
+    - [gateway网关对请求做referer认证](RECORD/gatewayRefererAuth.md)
+    - [METABASE介绍及踩过的坑](RECORD/METABASERECORD.md)
+    - [ELK6.X介绍及踩过的坑](RECORD/ELKRECORD.md)
+    - [python和shell操作redis](RECORD/PYTHONORSHELLCALLREDIS.md)  
+    <!-- - [算法-时间复杂度简述](JAVA/AlgorithmicComplexity.md) -->
+    - [爬虫分析京东商品销售记录](JAVA/searchjd.md)
+    - [springboot集成rabbitmq实现延时队列](RECORD/rabbitmq1.md)
+    - [Kali-linux](READING/kali.md)
+    - [xss注入实践](READING/xss.md)
+    - [MySQL查询缓存](RECORD/MYSQLCACHERECORD.md)
+    - [LAMBDA取出对象list中某个字段重复的集合](RECORD/FETCHDUPLICATESET-LAMBDA.md)
+    - [插入一千万条记录分组排序](RECORD/DATAFORKJOIN.md)
+    - [记一次阿里巴巴druid连接池超时](RECORD/DRUIDTIMEOUTRECORD.md)
+    <!-- - [浅谈阿里巴巴arthas](RECORD/arthas.md) -->
+- **总结**
+    - [JAVA并发编程实战](READING/CONCURRENTPROGAMMING.md)
+    - [MySQL中的锁](READING/MySQLLock)
+    - [MySQL的B+树索引原理](READING/MySQLB+TreeIndex.md)
+    <!-- - [深入理解java虚拟机](READING/JAVAVIRTUALMACHINE.md) -->
+    - [MySQL执行计划](READING/MySQLExecutionPlan.md)
+<!-- - **临时**
+    -[总结](no/rw.md) -->
+
+
