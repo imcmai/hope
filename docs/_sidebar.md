@@ -30,12 +30,12 @@
     - [异构数据源数据同步DATAX实战](RECORD/DATAXRECORD.md)
     - [gateway网关对请求做referer认证](RECORD/gatewayRefererAuth.md)
     - [METABASE介绍及踩过的坑](RECORD/METABASERECORD.md)
-    - [ELK6.X介绍及踩过的坑](RECORD/ELKRECORD.md)
-    - [python和shell操作redis](RECORD/PYTHONORSHELLCALLREDIS.md)  
+    <!-- - [ELK6.X介绍及踩过的坑](RECORD/ELKRECORD.md) -->
+    <!-- - [python和shell操作redis](RECORD/PYTHONORSHELLCALLREDIS.md)   -->
     <!-- - [算法-时间复杂度简述](JAVA/AlgorithmicComplexity.md) -->
     - [爬虫分析京东商品销售记录](JAVA/searchjd.md)
     - [springboot集成rabbitmq实现延时队列](RECORD/rabbitmq1.md)
-    - [Kali-linux](READING/kali.md)
+    <!-- - [Kali-linux](READING/kali.md) -->
     - [xss注入实践](READING/xss.md)
     - [MySQL查询缓存](RECORD/MYSQLCACHERECORD.md)
     - [LAMBDA取出对象list中某个字段重复的集合](RECORD/FETCHDUPLICATESET-LAMBDA.md)
@@ -48,5 +48,3 @@
     - [MySQL的B+树索引原理](READING/MySQLB+TreeIndex.md)
     <!-- - [深入理解java虚拟机](READING/JAVAVIRTUALMACHINE.md) -->
     - [MySQL执行计划](READING/MySQLExecutionPlan.md)
-<!-- - **临时**
-    -[总结](no/rw.md) -->
