@@ -16,3 +16,6 @@ keyword会回显到页面input的value属性,url改为:
 https://xss.fbisb.com/yx/level2.php?keyword="><script>alert("level2")</script>
 ``` 
 闭合原有input标签，插入script脚本后通关
+
+
+.....未完待续
