@@ -30,6 +30,7 @@
     - [gateway网关对请求做referer认证](RECORD/gatewayRefererAuth.md)
     - [METABASE介绍及踩过的坑](RECORD/METABASERECORD.md)
     - [爬虫分析京东商品销售记录](JAVA/searchjd.md)
+    - [springboot使用redisson集成哨兵模式的redis集群](JAVA/redisson1.md)
     - [springboot集成rabbitmq实现延时队列](RECORD/rabbitmq1.md)
     - [MySQL查询缓存](RECORD/MYSQLCACHERECORD.md)
     - [LAMBDA取出对象list中某个字段重复的集合](RECORD/FETCHDUPLICATESET-LAMBDA.md)
