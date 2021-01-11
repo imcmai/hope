@@ -29,5 +29,4 @@ SELECT * FROM TABLE LIMIT 10 LOCK IN SHARE MODE;
 SELECT * FROM TABLE LIMIT 10;
 COMMIT ;
 ```
-基于以上两点，似乎认为mysql的innodb已经解决了幻读，<font color = #FF000 size=3 >但是间隙锁只会在加了S锁/X锁的情况下才会加上间隙锁</font>而mysql的读默认都是读快照，在快照读的情况下，读取的是历史数据,看似解决了幻读的问题，实际上因为没有加S锁/X锁，会导致没有加间隙锁，<font color = #FF000 size=3 >假如这个时候，插入了一条数据，再次查询，这时候查询加锁，不会读快照，而是读当前，就会出现幻读的情况
-</font>
+基于以上两点，似乎认为mysql的innodb已经解决了幻读，<font color = #FF000 size=3 >但是间隙锁只会在加了S锁/X锁的情况下才会加上间隙锁</font>而mysql的读默认都是读快照，在快照读的情况下，读取的是历史数据,看似解决了幻读的问题，实际上因为没有加S锁/X锁，会导致没有加间隙锁，<font color = #FF000 size=3 >假如这个时候，插入了一条数据，再次查询，这时候查询加锁，不会读快照，而是读当前，就会出现幻读的情况</font>

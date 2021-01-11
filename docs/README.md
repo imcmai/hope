@@ -4,7 +4,7 @@
 有些文章是17年底随笔记在word文档/txt文本的文章，有些是从自己的csdn迁移过来的，有些是最近写的
 [csdn链接](https://blog.csdn.net/qq_35902833)
 # 目录
- - **探索**
+- **探索**
     - [ReentrantLock在dubbo中的应用](RECORD/Lock1.md)
     - [RR真的解决幻读了吗?](READING/MYSQL_RR_1.md)
     - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)

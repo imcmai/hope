@@ -1,4 +1,4 @@
- - **探索**
+- **探索**
     - [ReentrantLock在dubbo中的应用](RECORD/Lock1.md)
     - [RR真的解决幻读了吗?](READING/MYSQL_RR_1.md)
     - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)
