@@ -22,7 +22,7 @@ COMMIT ;
 重复刚才的步骤，会发现第二次读取，读到了插入的数据
 # 总结
 1. mysql使用mvcc版本号的方式实现快照读，来保证可重复读的特性
-2. mysql的RR隔离级别使用next-key-lock(间隙锁)来避免幻读,比如将两个查询调换个位置，插入的事务是无法执行的，会一直阻塞到锁释放
+2. mysql的RR隔离级别使用next-key-lock(间隙锁+行锁)来避免幻读,比如将两个查询调换个位置，插入的事务是无法执行的，会一直阻塞到锁释放
 ```sql
 start TRANSACTION;
 SELECT * FROM TABLE LIMIT 10 LOCK IN SHARE MODE;
