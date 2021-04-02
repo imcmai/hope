@@ -30,7 +30,8 @@
     <T> Future<T> submit(Runnable task, T result);
     //Runnable接口无返回值，返回的Future仅可使用isDone()判断是否结束
     Future<?> submit(Runnable task);
-    //1.1实例
+
+    //1.1示例
     TestEntity entity = new TestEntity();
     entity.setStr("1");
     Future<TestEntity> future = es.submit(new MyRunnable(entity),entity);
