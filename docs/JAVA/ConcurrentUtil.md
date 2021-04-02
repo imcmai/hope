@@ -18,24 +18,26 @@
             new ThreadPoolExecutor.AbortPolicy());
 ```
 通过```new ThreadFactoryBuilder().setNameFormat("test-pool-%d").build()```来控制线程池创建的线程前缀
+
 ### Future 带返回值的任务处理
+
 通常异步处理是无需返回值的，在需要拿到线程执行结果的场景，我们就需要用到Future,Future提供了三种带返回值的Submit
+
 ```java
     //Callbale有回调，此时Future可以拿到结果
     <T> Future<T> submit(Callable<T> task);
-    //Runnable接口，可以传入参数让主线程和线程池的子线程共享变量，参考下面代码
+    //Runnable接口，可以传入参数让主线程和线程池的子线程共享变量，参考下面代码1.1
     <T> Future<T> submit(Runnable task, T result);
     //Runnable接口无返回值，返回的Future仅可使用isDone()判断是否结束
     Future<?> submit(Runnable task);
-```
-```java
-TestEntity entity = new TestEntity();
-entity.setStr("1");
-Future<TestEntity> future = es.submit(new MyRunnable(entity),entity);
-System.out.println(entity.getStr()); //1
-System.out.println(future.get().getStr()); //3
+    //1.1实例
+    TestEntity entity = new TestEntity();
+    entity.setStr("1");
+    Future<TestEntity> future = es.submit(new MyRunnable(entity),entity);
+    System.out.println(entity.getStr()); //1
+    System.out.println(future.get().getStr()); //3
 
-class MyRunnable implements Runnable{
+    class MyRunnable implements Runnable{
     private TestEntity entity;
     public MyRunnable(TestEntity entity) {
         this.entity = entity;
@@ -45,7 +47,7 @@ class MyRunnable implements Runnable{
         entity.setStr("3");
     }
 ```
-我们看一下Future的定义
+我们看一下Future的定义：
 ```java
     //取消任务
     boolean cancel(boolean mayInterruptIfRunning);
