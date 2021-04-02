@@ -24,6 +24,7 @@
 - **基础**
     - **并发包**
         - [手写阻塞队列ArrayBlockingQueue](JAVA/ArrayBlockingQueue.md)
+        - [讲讲java并发包里的工具类](JAVA/ConcurrentUtil.md)
     - **数据结构**
         - [数组](JAVA/Array.md)
         - [链表](JAVA/LinkedList.md)
