@@ -65,7 +65,115 @@
 ```
 
 ## 处理有聚合关系的任务:CompletableFuture
-### 个人理解
+jdk8提供了异步编程的工具CompletableFuture，无需手工维护线程，语义清晰让代码更专注于业务，来看下类方法的定义，CompletableFuture不指定线程池的情况下默认使用forkjoinpool
+
+```java
+    //有返回值执行
+    public static <U> CompletableFuture<U> supplyAsync(Supplier<U> supplier);
+    //有返回值指定线程池
+    public static <U> CompletableFuture<U> supplyAsync(Supplier<U> supplier,
+                                                       Executor executor);
+    //无返回值执行
+    public static CompletableFuture<Void> runAsync(Runnable runnable);
+    //无返回值指定线程池
+    public static CompletableFuture<Void> runAsync(Runnable runnable,
+                                                   Executor executor);
+```
+
+CompletableFuture处理串行关系:
+
+```java
+    CompletionStage<R> thenApply(fn);
+    CompletionStage<R> thenApplyAsync(fn);
+    CompletionStage<Void> thenAccept(consumer);
+    CompletionStage<Void> thenAcceptAsync(consumer);
+    CompletionStage<Void> thenRun(action);
+    CompletionStage<Void> thenRunAsync(action);
+    CompletionStage<R> thenCompose(fn);
+    CompletionStage<R> thenComposeAsync(fn);
+```
+
+CompletableFuture处理AND关系:
+
+```java
+    CompletionStage<R> thenCombine(other, fn);
+    CompletionStage<R> thenCombineAsync(other, fn);
+    CompletionStage<Void> thenAcceptBoth(other, consumer);
+    CompletionStage<Void> thenAcceptBothAsync(other, consumer);
+    CompletionStage<Void> runAfterBoth(other, action);
+    CompletionStage<Void> runAfterBothAsync(other, action);
+```
+
+CompletableFuture处理OR关系:
+
+```java
+    CompletionStage applyToEither(other, fn);
+    CompletionStage applyToEitherAsync(other, fn);
+    CompletionStage acceptEither(other, consumer);
+    CompletionStage acceptEitherAsync(other, consumer);
+    CompletionStage runAfterEither(other, action);
+    CompletionStage runAfterEitherAsync(other, action);
+```
+异常处理:
+```java
+    CompletionStage exceptionally(fn);
+    CompletionStage<R> whenComplete(consumer);
+    CompletionStage<R> whenCompleteAsync(consumer);
+    CompletionStage<R> handle(fn);
+    CompletionStage<R> handleAsync(fn);
+```
+## 代码示例
+### 串行
+```java
+        CompletableFuture<String> f0 =
+                CompletableFuture.supplyAsync(() -> "Hello")
+                        .thenApply(s -> s + " World")
+                        .thenApply(String::toUpperCase);
+        System.out.println(f0.join());
+```
+### AND
+```java
+        CompletableFuture<String> future1 =
+                CompletableFuture.supplyAsync(() -> {
+                    return "F2";
+                }).thenCombine(CompletableFuture.supplyAsync(() -> {
+                    return "F3";
+                }), (f2, f3) -> {
+                    return f2 + f3;
+                });
+        System.out.println(future1.join());
+```
+### OR
+```java
+        CompletableFuture<String> f1 =
+                CompletableFuture.supplyAsync(() -> {
+                    return "F1";
+                });
+        CompletableFuture<String> f2 =
+                CompletableFuture.supplyAsync(() -> {
+                    return "F2";
+                });
+        CompletableFuture<String> f3 =
+                f1.applyToEither(f2, s -> s);
+        System.out.println(f3.join());
+```
+###　异常处理
+```java
+        // /0后抛出异常
+        CompletableFuture<Integer> future1 = 
+            CompletableFuture.supplyAsync(() -> (1 / 0))
+                    .thenApply(r -> r + 1)
+                    .exceptionally(e -> 0);
+        System.out.println(future1.join());
+
+        //或者使用回调
+        CompletableFuture<Integer> future1 = 
+            CompletableFuture.supplyAsync(() -> (1 / 0))
+            .whenComplete((r, e) -> {
+                System.out.println("返回值:" + r);
+                System.out.println("异常信息:" + e.toString());
+            });
+```
 ## 处理批量有序任务:CompletionService
 ### 个人理解
 ## Map/Reduce模型:Fork/Join
