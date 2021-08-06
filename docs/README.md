@@ -42,6 +42,7 @@
         - [单例模式](JAVA/singleton.md)
         - [实践策略模式+工厂模式改善既有代码](PATTERN/Strategy.md)
         - [状态模式](PATTERN/State.md)
+        - [责任链模式](JAVA/ChainOfResponsibility.md)
     - **算法**
         - [二分查找算法](JAVA/BinarySearch.md)   
 - **总结**
