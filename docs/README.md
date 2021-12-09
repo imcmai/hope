@@ -37,12 +37,13 @@
         - [栈](JAVA/Stack.md)
         - [队列](JAVA/Queue.md)
         - [跳跃表](JAVA/SkipList.md)
+        - [二叉树、二叉查找树、平衡二叉查找树](JAVA/)
     - **设计模式**
         - [装饰器模式](PATTERN/Decorator.md)  
         - [单例模式](JAVA/singleton.md)
         - [实践策略模式+工厂模式改善既有代码](PATTERN/Strategy.md)
         - [状态模式](PATTERN/State.md)
-        - [责任链模式](JAVA/ChainOfResponsibility.md)
+        - [实践责任链模式](JAVA/ChainOfResponsibility.md)
     - **算法**
         - [二分查找算法](JAVA/BinarySearch.md)   
 - **总结**
