@@ -40,6 +40,7 @@
     - **算法**
         - [二分查找算法](JAVA/BinarySearch.md)   
 - **总结**
+    - [MySQL针对于查询优化的思路](REDING/../READING/MySQL_Optimization.md)
     - [JAVA并发编程实战](READING/CONCURRENTPROGAMMING.md)
     - [MySQL中的锁](READING/MySQLLock)
     - [MySQL的B+树索引原理](READING/MySQLB+TreeIndex.md)
