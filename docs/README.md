@@ -27,6 +27,8 @@
     - [插入一千万条记录分组排序](RECORD/DATAFORKJOIN.md)
     - [mysql索引优化，强制使用索引](RECORD/ForceIndex.md)  
     - [记一次阿里巴巴druid连接池超时](RECORD/DRUIDTIMEOUTRECORD.md)
+    - [SSO的CAS方式对接及简单的鉴权](RECORD/SSO_CAS.md)
+    - [validation自定义注解实现业务](RECORD/validation.md)
 - **基础**
     - **并发包**
         - [手写阻塞队列ArrayBlockingQueue](JAVA/ArrayBlockingQueue.md)
@@ -37,16 +39,16 @@
         - [栈](JAVA/Stack.md)
         - [队列](JAVA/Queue.md)
         - [跳跃表](JAVA/SkipList.md)
-        - [二叉树、二叉查找树、平衡二叉查找树](JAVA/)
     - **设计模式**
         - [装饰器模式](PATTERN/Decorator.md)  
         - [单例模式](JAVA/singleton.md)
         - [实践策略模式+工厂模式改善既有代码](PATTERN/Strategy.md)
         - [状态模式](PATTERN/State.md)
-        - [实践责任链模式](JAVA/ChainOfResponsibility.md)
+        - [责任链模式](JAVA/ChainOfResponsibility.md)
     - **算法**
         - [二分查找算法](JAVA/BinarySearch.md)   
 - **总结**
+    - [MySQL针对于查询优化的思路](REDING/../READING/MySQL_Optimization.md)
     - [JAVA并发编程实战](READING/CONCURRENTPROGAMMING.md)
     - [MySQL中的锁](READING/MySQLLock)
     - [MySQL的B+树索引原理](READING/MySQLB+TreeIndex.md)
