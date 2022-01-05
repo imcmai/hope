@@ -97,16 +97,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(requestHeaderContextInterceptor).addPathPatterns("/**")
                 .excludePathPatterns("/op/actuator/health")
-                .excludePathPatterns("/login")
-                .excludePathPatterns("/mtm/syncProduct")
-                .excludePathPatterns("/api/v1/partner/general")
-                .excludePathPatterns("/su")
-                .excludePathPatterns("/api/v1/signature/electronicSignatureCallback")
-                .excludePathPatterns("/api/v1/authorization-letter/Authorize/AuthorizeInfo")
-                .excludePathPatterns("/api/v1/authorization-letter/Authorize/AuthorizeFileDown")
-                .excludePathPatterns("/api/v1/authorization-letter/Authorize/AuthorizeReCall")
-                .excludePathPatterns("/api/v1/authorization-letter/Authorize/ValidateAuthorizeFileCode")
-                .excludePathPatterns("/api/v1/authorization-letter/Authorize/GetAssistantList");
+                .excludePathPatterns("/login");
         super.addInterceptors(registry);
     }
 }
