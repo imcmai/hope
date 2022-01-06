@@ -3,25 +3,6 @@
 ![SSO](../_media/sso_cas.png)
 ### 鉴权
 ```code
-import com.alibaba.fastjson.JSON;
-import com.ruijie.op.common.bo.UserBO;
-import com.ruijie.op.common.enums.ResultModelEnum;
-import com.ruijie.op.common.result.Result;
-import lombok.extern.slf4j.Slf4j;
-import org.redisson.api.RBucket;
-import org.redisson.api.RedissonClient;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.concurrent.TimeUnit;
-
 /**
  * @author zrh
  * @date 2021/10/29 14:59
