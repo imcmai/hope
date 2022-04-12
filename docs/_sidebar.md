@@ -23,6 +23,7 @@
     - [记一次阿里巴巴druid连接池超时](RECORD/DRUIDTIMEOUTRECORD.md)
     - [SSO的CAS方式对接及简单的鉴权](RECORD/SSO_CAS.md)
     - [validation自定义注解实现业务](RECORD/validation.md)
+    - [Spring cloud gateway实现自定义负载均衡策略按地域转发](RECORD/sc_lb.md)
 - **基础**
     - **并发包**
         - [手写阻塞队列ArrayBlockingQueue](JAVA/ArrayBlockingQueue.md)
