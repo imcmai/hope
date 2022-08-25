@@ -17,7 +17,7 @@
 - **记录**
     - [排查一次服务CPU占用100%+](RECORD/cpu1.md)  
     - [异构数据源数据同步DATAX实战](RECORD/DATAXRECORD.md)
-   <!-- - [gateway网关对请求做referer认证](RECORD/gatewayRefererAuth.md) -->
+    - [gateway网关对请求做referer认证](RECORD/gatewayRefererAuth.md)
     - [METABASE介绍及踩过的坑](RECORD/METABASERECORD.md)
     - [三阶段提交相比二阶段提交解决了什么问题?](RECORD/3PC_2PC.md)
     <!-- - [爬虫分析京东商品销售记录](JAVA/searchjd.md) -->
@@ -31,6 +31,7 @@
     - [SSO的CAS方式对接及简单的鉴权](RECORD/SSO_CAS.md)
     - [validation自定义注解实现业务](RECORD/validation.md)
     - [Spring cloud gateway实现自定义负载均衡策略按地域转发](RECORD/sc_lb.md)
+    - [Spring cloud gateway遇到Broken pipe异常未记录日志](RECORD/gateway_log_troubleshooting.md)
     - [Spring cloud gateway动态路由、自定义异常](RECORD/sc_route_exception.md)
 - **基础**
     - **并发包**
