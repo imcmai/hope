@@ -26,6 +26,7 @@
     - [validation自定义注解实现业务](RECORD/validation.md)
     - [Spring cloud gateway实现自定义负载均衡策略按地域转发](RECORD/sc_lb.md)
     - [Spring cloud gateway遇到Broken pipe异常未记录日志](RECORD/gateway_log_troubleshooting.md)
+    - [Spring cloud gateway动态路由、自定义异常](RECORD/sc_route_exception.md)
 - **基础**
     - **并发包**
         - [手写阻塞队列ArrayBlockingQueue](JAVA/ArrayBlockingQueue.md)
