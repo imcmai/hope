@@ -18,5 +18,5 @@ memCachedClient.add(key, value, time);
 ### 补充
 普通锁还是分布式锁取决于是否全局唯一 并不是什么高深莫测的东西
 ### springboot集成redisson实现分布式锁(redis集群为哨兵模式)
-👉[springboot集成redisson实现分布式锁](redisson1.md)
+👉[springboot集成redisson实现分布式锁](/JAVA/redisson1.md)
 
