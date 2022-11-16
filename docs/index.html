@@ -9,13 +9,22 @@
   <link rel="shortcut icon" href="/icon.ico" type="image/x-icon"/>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 </head>
 <body>
   <div id="app">加载中</div>
   <script>
+    const gitalk = new Gitalk({
+    clientID: '1e8dc875b999fed9f99e',
+    clientSecret: '175c6ec4dceb35761bb169f8ed87efec9f3bf095',
+    repo: 'https://github.com/imcmai/hope',
+    owner: 'cmai',
+    admin: [],
+    distractionFreeMode: false
+  })
     window.$docsify = {
       name: 'hope',
-      repo: 'https://github.com/imcmai/cmaidoc',
+      repo: 'https://github.com/imcmai/hope',
       loadSidebar:true,
       auto2top: true,
       coverpage: true,
@@ -25,5 +34,7 @@
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4" data-ga="G-8QZ3XFLC01"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 </body>
 </html>
