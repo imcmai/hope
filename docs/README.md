@@ -15,6 +15,7 @@
     - [服务性能指标](RECORD/PropertyIndex.md)
     - [Synchronized锁对象注意事项(锁的不可变，私有性)](RECORD/Sync1.md)
 - **记录**
+    - [排查一次Metaspace溢出导致的OOM](RECORD/metaspace_oom.md)
     - [排查一次服务CPU占用100%+](RECORD/cpu1.md)  
     - [异构数据源数据同步DATAX实战](RECORD/DATAXRECORD.md)
     - [gateway网关对请求做referer认证](RECORD/gatewayRefererAuth.md)
