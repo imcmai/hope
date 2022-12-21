@@ -6,7 +6,7 @@
     - [Spring cloud gateway动态路由、自定义异常](RECORD/sc_route_exception.md)
     - [即时编译器(JIT)引发的多线程问题](RECORD/JITCompilerRecord.md)
     - [MySQL针对于查询优化的思路](REDING/../READING/MySQL_Optimization.md)
-- **2021**
+- :footprints: **2021**
     - [三阶段提交相比二阶段提交解决了什么问题?](RECORD/3PC_2PC.md)
     - [validation自定义注解实现业务](RECORD/validation.md)
     - [CPU缓存行(cache line)对于代码的影响](RECORD/CpuCacheLine.md)
@@ -18,7 +18,7 @@
     - [MySQL执行计划](READING/MySQLExecutionPlan.md)
     - [实践策略模式+工厂模式改善既有代码](PATTERN/Strategy.md)
     - [SSO的CAS方式对接及简单的鉴权](RECORD/SSO_CAS.md)
-- **2020**
+- :footprints: **2020**
      - [排查一次服务CPU占用100%+](RECORD/cpu1.md)  
      - [gateway网关对请求做referer认证](RECORD/gatewayRefererAuth.md)
      - [springboot使用redisson集成哨兵模式的redis集群](JAVA/redisson1.md)
@@ -28,7 +28,7 @@
      - [ReentrantLock在dubbo中的应用](RECORD/Lock1.md)
      - [讲讲java并发包里的工具类](JAVA/ConcurrentUtil.md)
     - [JAVA并发编程实战](READING/CONCURRENTPROGAMMING.md)
-- **2019**
+- :footprints: **2019**
     - [记一次阿里巴巴druid连接池超时](RECORD/DRUIDTIMEOUTRECORD.md)
     - [异构数据源数据同步DATAX实战](RECORD/DATAXRECORD.md)
     - [数组](JAVA/Array.md)
@@ -36,7 +36,7 @@
     - [栈](JAVA/Stack.md)
     - [队列](JAVA/Queue.md)
     - [跳跃表](JAVA/SkipList.md)
-- **2018**
+- :footprints: **2018**
     - [METABASE介绍及踩过的坑](RECORD/METABASERECORD.md)
     - [MySQL查询缓存](RECORD/MYSQLCACHERECORD.md)
     - [分布式锁浅谈](JAVA/DISTRIBUTEDLOCK.md)
