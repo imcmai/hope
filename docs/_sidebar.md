@@ -14,6 +14,7 @@
     - [异构数据源数据同步DATAX实战](RECORD/DATAXRECORD.md)
     - [gateway网关对请求做referer认证](RECORD/gatewayRefererAuth.md)
     - [METABASE介绍及踩过的坑](RECORD/METABASERECORD.md)
+    - [mysql和jvm的Prometheus告警指标参考](RECORD/prometheus_metrics.md)
     - [三阶段提交相比二阶段提交解决了什么问题?](RECORD/3PC_2PC.md)
     <!-- - [爬虫分析京东商品销售记录](JAVA/searchjd.md) -->
     - [springboot使用redisson集成哨兵模式的redis集群](JAVA/redisson1.md)
