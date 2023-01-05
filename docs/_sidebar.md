@@ -1,4 +1,5 @@
 - **2022**
+    - [多模块项目为每个模块单独迁移到新仓库](RECORD/maven_multi-module_git_migrate.md)
     - [排查一次Metaspace溢出导致的OOM](RECORD/metaspace_oom.md)
     - [mysql和jvm的Prometheus告警指标参考](RECORD/prometheus_metrics.md)
     - [Spring cloud gateway实现自定义负载均衡策略按地域转发](RECORD/sc_lb.md)
