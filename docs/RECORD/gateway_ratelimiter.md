@@ -1,6 +1,7 @@
 ## 限流场景
 1. 不健康的压力测试，或者脚本编写错误，导致网关或下游服务被占用大量资源，影响正常请求
 2. 帮助下游服务，提供预期的流量，非预期流量将会被拒绝/阻塞
+
 ## spring cloud gateway是如何实现限流过滤器的
 源码在RequestRateLimiterGatewayFilterFactory，由RequestRateLimiterGatewayFilterFactory的内置Config类来初始化限流过滤器,我们来看几个关键配置
 ```code
@@ -26,6 +27,7 @@
 	}
 
 ```
+
 ### 内置的令牌桶算法
 源码在RedisRateLimiter类中，RedisRateLimiter的Config类负责配置令牌生成和消费的规则
 ```code
@@ -51,6 +53,7 @@
 
 1. 要保证检查和扣除令牌动作的原子性，使限流更精准
 2. 天然的分布式限流，网关在多节点的情况下共享限流数据
+
 ### 如何实践中使用
 引入redis的pom文件
 ```code
