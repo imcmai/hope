@@ -1,5 +1,6 @@
 - **2023**
     - [bitnami/rabbitmq的镜像接收不到发送的消息](RECORD/rabbitmq_k8s_fix.md)
+    - [Spring cloud gateway内置的限流实现及实践](RECORD/gateway_ratelimiter.md)
 - :footprints: **2022**
     - [多模块项目为每个模块单独迁移到新仓库](RECORD/maven_multi-module_git_migrate.md)
     - [排查一次Metaspace溢出导致的OOM](RECORD/metaspace_oom.md)
