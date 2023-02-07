@@ -12,10 +12,6 @@ spring:
 追加配置，通过启动参数获取，部署该实例的时候指定实例所在的区域
 ## 网关改造
 ```code
-package com.ruijie.gateway.service.config;
-
-import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClients;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * @author zrh
@@ -29,14 +25,6 @@ public class RJLoadBalancerAutoConfig {
 
 ```
 ```code
-package com.ruijie.gateway.service.config;
-
-import org.springframework.cloud.loadbalancer.core.ReactorServiceInstanceLoadBalancer;
-import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
-import org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.core.env.Environment;
 
 /**
  * @author zrh
@@ -57,27 +45,6 @@ public class RJLoadBalancerConfig {
 ```
 网关也通过环境变量指定了当前所在的区域
 ```code
-package com.ruijie.gateway.service.config;
-
-import com.alibaba.fastjson.JSON;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.loadbalancer.DefaultResponse;
-import org.springframework.cloud.client.loadbalancer.EmptyResponse;
-import org.springframework.cloud.client.loadbalancer.Request;
-import org.springframework.cloud.client.loadbalancer.Response;
-import org.springframework.cloud.loadbalancer.core.NoopServiceInstanceListSupplier;
-import org.springframework.cloud.loadbalancer.core.ReactorServiceInstanceLoadBalancer;
-import org.springframework.cloud.loadbalancer.core.SelectedInstanceCallback;
-import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
-import reactor.core.publisher.Mono;
-
-import java.util.List;
-import java.util.Random;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
 
 /**
  * @author zrh
@@ -94,6 +61,7 @@ public class RJLoadBalancer implements ReactorServiceInstanceLoadBalancer {
     private final AtomicInteger position;
     //区域轮询随机数
     private final AtomicInteger zonePosition;
+    private final String CLIENT_ZONE_KEY = "rj-zone";
     private ObjectProvider<ServiceInstanceListSupplier> serviceInstanceListSupplierProvider;
 
     public RJLoadBalancer(ObjectProvider<ServiceInstanceListSupplier> serviceInstanceListSupplierProvider, String serviceId, String gatewayZone) {
@@ -131,27 +99,29 @@ public class RJLoadBalancer implements ReactorServiceInstanceLoadBalancer {
             return new EmptyResponse();
         } else {
             List<ServiceInstance> zoneHitService = instances.parallelStream().filter((service) -> {
-                String zone = service.getMetadata().get("rj.zone");
-                if (gatewayZone.equals(zone)) {
-                    return true;
-                } else {
-                    return false;
-                }
+                String zone = service.getMetadata().get(CLIENT_ZONE_KEY);
+                return gatewayZone.equals(zone);
             }).collect(Collectors.toList());
-            ServiceInstance instance = null;
-            if (log.isWarnEnabled()) {
-                log.warn("Gateway load balance zone hit:"+JSON.toJSONString(zoneHitService));
-            }
             if (zoneHitService.isEmpty()) {
-                int pos = Math.abs(this.position.incrementAndGet());
-                instance = instances.get(pos % instances.size());
+                return roundRobin(position, instances);
             } else {
-                int pos = Math.abs(this.zonePosition.incrementAndGet());
-                instance = zoneHitService.get(pos % instances.size());
+                return roundRobin(zonePosition, zoneHitService);
             }
-            return new DefaultResponse(instance);
         }
     }
+
+    private Response<ServiceInstance> roundRobin(AtomicInteger position, List<ServiceInstance> instances) {
+        int pos = Math.abs(position.incrementAndGet());
+        ServiceInstance serviceInstance = instances.get(pos % instances.size());
+        if (serviceInstance.getPort() == 443) {
+            NacosServiceInstance instance = (NacosServiceInstance) serviceInstance;
+            instance.setSecure(true);
+            return new DefaultResponse(instance);
+        }
+        log.info("Gateway load balancer hit:" + JSON.toJSONString(serviceInstance));
+        return new DefaultResponse(serviceInstance);
+    }
 }
+
 
 ```
