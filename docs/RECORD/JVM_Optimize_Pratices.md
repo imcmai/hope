@@ -80,4 +80,9 @@ eden和survivor的比例是 8:1 ，那么为什么会出现这么大的偏差呢
 这里也就明白了survivor区为什么这么小了
 ### 解决方案
 1. 调整-Xmn的大小
-2. 显示指定survivor区的比例
+2. 显示指定survivo
+### 补充
+在显示指定survivor区的比例时，需同时关闭自适应策略
+```code
+```-XX:SurvivorRatio=8 -XX:-UseAdaptiveSizePolicy
+```
