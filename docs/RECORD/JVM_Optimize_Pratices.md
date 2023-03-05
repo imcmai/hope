@@ -117,5 +117,5 @@ Eden和From、To的比例应该是 8:1:1 ，但是这里，From和To都是6M，�
 #### 补充
 在实践中即使将SurvivorRatio显示设置到跟默认值(SurvivorRatio = 8)一样,也不会生效，需要在显示指定survivor区的比例时，同时关闭自适应策略
 ```code
-```-XX:SurvivorRatio=8 -XX:-UseAdaptiveSizePolicy
+-XX:SurvivorRatio=8 -XX:-UseAdaptiveSizePolicy
 ```
