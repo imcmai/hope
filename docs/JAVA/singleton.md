@@ -10,17 +10,18 @@
 1. 违反面向对象的单一职责
 2. 不适于扩展
 ## 单例最佳实践
-这是之前做的一道笔试题
-> 1：现在有Message和MessageFactory两个接口如下：
-    ```code
-        public interface Message extends Serializable {
-            void printMessage();
-        }
-        public interface MessageFactory {
-            Message newMessage(String countryCode);
-        }
-    ```
-  请编写一个实现MessageFactory 接口的类，并使用到单例模式。
+这是之前做的一道笔试题:  
+
+现在有Message和MessageFactory两个接口如下：  
+```
+    public interface Message extends Serializable {
+        void printMessage();
+    }
+    public interface MessageFactory {
+        Message newMessage(String countryCode);
+    }
+```
+请编写一个实现MessageFactory 接口的类，并使用到单例模式。
   
 ```code
 package subject.demo.one;
@@ -51,19 +52,20 @@ public class MessageFactoryImpl implements MessageFactory {
         message.printMessage();
     }
 }
-```
+```  
+
 我们来解读一下
-    1. 双检查是为了在对象创建成功的情况下不必要加锁，所以在外层直接返回实例对象
-    2. volatile的作用是为了避免jvm对代码进行重排序
+1. 双检查是为了在对象创建成功的情况下不必要加锁，所以在外层直接返回实例对象
+2. volatile的作用是为了避免jvm对代码进行重排序
 ## jvm重排带来的问题 :id=jvmRearrangement
 创建对象我们认为的执行顺序应该是
-    1. 分配一块内存M
-    2. 内存M初始化单例对象
-    3. 将实例的指针指向M 
+1. 分配一块内存M
+2. 内存M初始化单例对象
+3. 将实例的指针指向M 
 在创建对象的时候经过jvm的优化可能就会变成
-    1. 分配一块内存M
-    2. 将实例的指针指向M
-    3. 内存M初始化单例对象
+1. 分配一块内存M
+2. 将实例的指针指向M
+3. 内存M初始化单例对象
 这个时候就有可能触发空指针问题(假如发生线程切换,对象创建到一半，让出cpu时间片，其他线程判断空值，不为空，拿此对象去操作)，这就是volatile的作用，禁止指令重排序，
 有volatile声明的变量，假如有两个线程，线程A执行完后会强制将值刷新到内存中，线程B进行相关操作时会强制重新把内存中的内容写入到自己的缓存，这也是happen-before规则之一，后续会讲happen-before规则
 ## 其他

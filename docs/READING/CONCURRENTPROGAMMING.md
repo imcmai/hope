@@ -54,14 +54,14 @@ java内存模型提供了volatile，final和sync和happen-before规则来让开�
 ### sync的作用
 ...这个可以延伸出锁的状态和升级降级的策略以及对象的监视器了，改天单独写一篇
 ### happens-before规则
-    1. 程序顺序性规则:前面的操作可见于后续的任意操作，可以保证单线程下的有序性
-    2. volatile变量规则:对一个volatile变量的写可见于后续的读操作，前面讲过了，加了内存屏障所以会刷新内存值
-    3. happens-before传递性规则: A happens-before于B,Bhappens-before于C,那么Ahappens-before于C
-    4. 管程锁规则:锁的解锁happens-before于后续的加锁(管程，比如sync就是管程的一种实现)
-    5. 线程start规则:主线程启动子线程前的操作happens-before于子线程
-    6. 线程join规则:主线程调用子线程join,阻塞完成后，子线程的所有操作happens-before于主线程
-    7. 程序中断规则:对线程interrupted()方法的调用先行于被中断线程的代码检测到中断时间的发生。
-    8. 对象finalize规则:一个对象的初始化完成（构造函数执行结束）先行于发生它的finalize()方法的开始
+1. 程序顺序性规则:前面的操作可见于后续的任意操作，可以保证单线程下的有序性
+2. volatile变量规则:对一个volatile变量的写可见于后续的读操作，前面讲过了，加了内存屏障所以会刷新内存值
+3. happens-before传递性规则: A happens-before于B,Bhappens-before于C,那么Ahappens-before于C
+4. 管程锁规则:锁的解锁happens-before于后续的加锁(管程，比如sync就是管程的一种实现)
+5. 线程start规则:主线程启动子线程前的操作happens-before于子线程
+6. 线程join规则:主线程调用子线程join,阻塞完成后，子线程的所有操作happens-before于主线程
+7. 程序中断规则:对线程interrupted()方法的调用先行于被中断线程的代码检测到中断时间的发生。
+8. 对象finalize规则:一个对象的初始化完成（构造函数执行结束）先行于发生它的finalize()方法的开始
     
     
 
