@@ -1,7 +1,8 @@
 - **2023**
+    - [MySQL一行配置导致的所有请求都阻塞问题](RECORD/mysql-concurrency.md)
     - [JAVA网络编程,自定义网络协议实现分布式锁（一）](RECORD/java-network-program1.md)
     - [SEATA AT模式死锁问题记录](RECORD/seata-dead-lock.md)
-    - [opentelemetry-java-agent二次开发](RECORD/opentelemetry-java-agent.md)
+    <!-- - [opentelemetry-java-agent二次开发](RECORD/opentelemetry-java-agent.md) -->
     - [一次JVM堆内存高占用问题排查](RECORD/JVM_Optimize_Pratices.md)
     - [bitnami/rabbitmq的镜像接收不到发送的消息](RECORD/rabbitmq_k8s_fix.md)
     - [Spring cloud gateway内置的限流实现及实践](RECORD/gateway_ratelimiter.md)
