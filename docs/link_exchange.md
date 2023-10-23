@@ -21,3 +21,14 @@
 
 ## :point_right: 申请友链
 提交issues或pull requests，或和我联系
+
+## 我的友链
+<div class="friend-link" style="background-color: #e6f2ff;">
+    <a href="https://cmai.xin" target="_blank">
+        <img src="https://cmai.xin/_media/favicon.ico" alt="Friend Website Logo" style="width: 100px; height: 100px;">
+        <div class="description">
+            <h3>hope的博客</h3>
+            <p>保持好奇，记录成长</p>
+        </div>
+    </a>
+</div>
