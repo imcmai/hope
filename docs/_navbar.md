@@ -1,2 +1,3 @@
-- 和我联系
+- :runner: 和我联系
   - [我的微信](contact.md)
+- :two_hearts: [友情连接](link_exchange.md)
