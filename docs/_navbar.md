@@ -1,3 +1,3 @@
-- :runner: 和我联系
+- :icecream: [友情连接](link_exchange.md)
+- :watermelon: 和我联系
   - [我的微信](contact.md)
-- :two_hearts: [友情连接](link_exchange.md)

@@ -1,4 +1,4 @@
-## :two_hearts: 友情链接
+## :icecream: 友情链接
 <style>
     .friend-link {
         display: inline-block;
