@@ -28,11 +28,11 @@
 </div>
 
 <div class="friend-link" style="background-color: #f1f1f1;">
-    <a href="https://hexo.fluid-dev.com" target="_blank">
-        <img src="https://hexo.fluid-dev.com/img/favicon.png" alt="Friend Website Logo" style="width: 100px; height: 100px;">
+    <a href="https://heeler-deer.top/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/heeler-deer/absorbing/avatar.jpg" alt="Friend Website Logo" style="width: 100px; height: 100px;">
         <div class="description">
-            <h3>Fluid</h3>
-            <p>Fluid 主题官方博客</p>
+            <h3>Heeler-Deer</h3>
+            <p>Welcome to HD's hole!</p>
         </div>
     </a>
 </div>
