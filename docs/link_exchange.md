@@ -20,7 +20,7 @@
 
 
 ## :point_right: 申请友链
-提交issues或pull requests，或和我联系
+提交issues或pull requests，或下方留言
 
 ## 我的友链
 <div class="friend-link" style="background-color: #e6f2ff;">
