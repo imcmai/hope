@@ -8,10 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta name="baidu-site-verification" content="codeva-J7GOPuhzWb" />
   <link rel="icon" href="/_media/favicon.ico" type="image/x-icon" >
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/style.css"/>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css"/>
+  <link href="https://cdn.bootcdn.net/ajax/libs/docsify/4.13.1/themes/vue.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css" />
+  <link rel="stylesheet" href="libs/baner.css"/>
+  <link rel="stylesheet" href="libs/dark.css"/>
 <!--  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme"-->
 <!--          type="text/css"/>-->
 <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sushantrahate/docsify-darkly-theme/css/darkly.css">-->
@@ -36,13 +36,14 @@
       // ga: 'G-8QZ3XFLC01'
     }
   </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<!-- GitTalk评论 -->
+  <script src="libs/docsify-gitalk.min.js"></script>
+  <script src="libs/gitalk.min.js"></script>
+  <script src="libs/docsify.min.js"></script>
   <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script> -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="libs/docsify-copy-code.min.js"></script>
+  <script src="libs/zoom-image.min.js"></script>
+  <script src="libs/docsify-pagination.min.js"></script>
 
 
 <script>
@@ -50,7 +51,10 @@
     clientID: '5444e980178602d9ab2d',
     clientSecret: 'b629689f1e89b48292c55bd2d332ada02a3faf7f',
     repo: 'hope',
+    language: 'zh-CN',
     owner: 'imcmai',
+    perPage: 15,
+    githubID: 'imcmai',
     admin: ['imcmai'],
     // facebook-like distraction free mode
     distractionFreeMode: false
