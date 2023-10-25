@@ -1,13 +1,41 @@
 ## :icecream: 友情链接
 <style>
+    .friend-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
     .friend-link {
-        display: inline-block;
-        margin-right: 10px;
+        flex: 1 0 21%; 
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        box-sizing: border-box;
+        transition: transform 0.3s ease;
+        will-change: transform;
+    }
+    .friend-link:hover {
+        transform: scale(1.05);
+    }
+    .friend-link img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .friend-link .description {
+        background-color: #e1e1e1;
         padding: 10px;
         border-radius: 5px;
     }
+    .friend-link .description h3, 
+    .friend-link .description p {
+        margin: 0;
+        line-height: 1.5;
+    }
 </style>
 
+<div class="friend-links">
+    <!-- friend-link divs here -->
 <div class="friend-link" style="background-color: #f1f1f1;">
     <a href="https://www.xmrss.com" target="_blank">
         <img src="https://www.xmrss.com/usr/uploads/2023/10/190501894.jpg" alt="Friend Website Logo" style="width: 100px; height: 100px;">
@@ -36,7 +64,7 @@
         </div>
     </a>
 </div>
-
+</div>
 
 ## :point_right: 申请友链
 提交issues或pull requests，或下方留言
