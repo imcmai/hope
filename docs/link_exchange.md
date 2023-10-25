@@ -17,12 +17,38 @@
         </div>
     </a>
 </div>
+<div class="friend-link" style="background-color: #f1f1f1;">
+    <a href="https://booop.net/" target="_blank">
+        <img src="https://api.booop.net/assets/avatar/booop_logo_512_white_background.png" alt="Friend Website Logo" style="width: 100px; height: 100px;">
+        <div class="description">
+            <h3>booop</h3>
+            <p>一个隐匿的私人小站</p>
+        </div>
+    </a>
+</div>
+
+<div class="friend-link" style="background-color: #f1f1f1;">
+    <a href="https://hexo.fluid-dev.com" target="_blank">
+        <img src="https://hexo.fluid-dev.com/img/favicon.png" alt="Friend Website Logo" style="width: 100px; height: 100px;">
+        <div class="description">
+            <h3>Fluid</h3>
+            <p>Fluid 主题官方博客</p>
+        </div>
+    </a>
+</div>
 
 
 ## :point_right: 申请友链
 提交issues或pull requests，或下方留言
 
 ## 我的友链
+名称：hope的博客
+
+链接：https://cmai.xin/
+
+头像：https://cmai.xin/_media/favicon.ico
+
+描述：保持好奇，记录成长
 <div class="friend-link" style="background-color: #e6f2ff;">
     <a href="https://cmai.xin" target="_blank">
         <img src="https://cmai.xin/_media/favicon.ico" alt="Friend Website Logo" style="width: 100px; height: 100px;">
