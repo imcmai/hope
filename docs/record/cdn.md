@@ -2,16 +2,20 @@
 临时接手负责一个官网的项目，分为前台和后台，前台的大部分页面是用后台的一套CMS管理系统生成的
 ## 遇到的问题
 发起请求后，如果等待时间较长，会出现以下两种情况
-1. 重复请求两次 ,nginx收到两条请求信息， ip是不同的,一条是499，一条是200，但是两条请求都已经被后端处理了
-```
+1. 重复请求两次 ,nginx收到两条请求信息， ip是不同的,一条是499，一条是200，但是两条请求都已经被后端处理了 
+
+```code
 203.205.251.56 - - [29/Feb/2024:13:48:57 +0000] "POST /api/route1/route2/ HTTP/1.1" 499 0 "https://domain.com/api/route1/route2" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 
 203.205.249.216 - - [29/Feb/2024:13:48:57 +0000] "POST /api/route1/route2/ HTTP/1.1" 200 71 "https://domain.com/api/route1/route2" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-```
-2. 只请求一次，但是chrome出现   (failed)net::ERR_HTTP2_PROTOCOL_ERROR，nginx此时只收到一条请求信息，状态码为499
-```
+``` 
+
+2. 只请求一次，但是chrome出现   (failed)net::ERR_HTTP2_PROTOCOL_ERROR，nginx此时只收到一条请求信息，状态码为499 
+
+```code
 203.205.221.183 - - [29/Feb/2024:13:56:28 +0000] "POST /api/route1/route2/ HTTP/1.1" 499 0 "https://domain.com/api/route1/route2" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 ```
+
 ## 排查思路
 客户端访问接口```https://domain.com/api/route1/route2```,  该域名配置了CDN加速，最终映射到服务器43.xx.xx.xx， 服务器nginx再反向代理到后端服务，
 直接走服务器ip访问这个nginx的代理是没问题的，只有走域名才会出现问题，所以初步断定是CDN加速发起了重试，由于对CDN不太了解，开始学习相关知识
