@@ -19,7 +19,7 @@
     - [Spring cloud gateway实现自定义负载均衡策略按地域转发](record/sc_lb.md)
     - [Spring cloud gateway遇到Broken pipe异常未记录日志](record/gateway_log_troubleshooting.md)
     - [Spring cloud gateway动态路由、自定义异常](record/sc_route_exception.md)
-    - [即时编译器(JIT)引发的多线程问题](record/JITCompilerrecord.md)
+    - [即时编译器(JIT)引发的多线程问题](record/jit_compiler_record.md)
     - [MySQL针对于查询优化的思路](REDING/../reading/MySQL_Optimization.md)
 - :footprints: **2021**
     - [三阶段提交相比二阶段提交解决了什么问题?](record/3PC_2PC.md)
